@@ -1,19 +1,31 @@
 // Iteration #1: Find the maximum
-function maxOfTwoNumbers() {}
+
+function maxOfTwoNumbers(a, b) {
+  return Math.max(a, b);
+}
+
+const num1 = 5;
+const num2 = 10;
+const resultado = maxOfTwoNumbers(num1, num2);
+
+console.log(`El número mayor entre ${num1} y ${num2} es ${resultado}.`);
+
+
+
 
 
 
 // Iteration #2: Find longest word
-const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
 
-function findLongestWord() {}
+
+
 
 
 
 // Iteration #3: Calculate the sum
-const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
 
-function sumNumbers() {}
+
+
 
 
 
@@ -24,21 +36,49 @@ function sum() {}
 
 // Iteration #4: Calculate the average
 // Level 1: Array of numbers
-const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
 
-function averageNumbers() {}
+function averageNumbers(numbers) {
+  let sum = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+      sum += numbers[i];
+  }
+
+  const average = sum / numbers.length;
+  return average;
+}
+
+const numbers = [2, 6, 9, 10, 7, 4, 1, 9];
+const averageResult = averageNumbers(numbers);
+
+console.log(`La media de los números en el array es: ${averageResult}.`);
 
 
 // Level 2: Array of strings
-const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
 
-function averageWordLength() { }
+
+
+
+
 
 // Bonus - Iteration #4.1
 function avg() {}
 
 // Iteration #5: Unique arrays
-const wordsUnique = [
+
+function uniquifyArray(words) {
+  const uniqueWords = [];
+
+  for (const word of words) {
+      if (!uniqueWords.includes(word)) {
+          uniqueWords.push(word);
+      }
+  }
+
+  return uniqueWords;
+}
+
+const words = [
   'crab',
   'poison',
   'contagious',
@@ -52,33 +92,20 @@ const wordsUnique = [
   'bring'
 ];
 
-function uniquifyArray() {}
+const uniqueWordsArray = uniquifyArray(words);
+console.log('Nuevo array sin duplicados:', uniqueWordsArray);
+
 
 
 
 // Iteration #6: Find elements
-const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
 
-function doesWordExist() {}
+
 
 
 
 // Iteration #7: Count repetition
-const wordsCount = [
-  'machine',
-  'matter',
-  'subset',
-  'trouble',
-  'starting',
-  'matter',
-  'eating',
-  'matter',
-  'truth',
-  'disobedience',
-  'matter'
-];
 
-function howManyTimes() {}
 
 
 
