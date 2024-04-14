@@ -11,21 +11,46 @@ const resultado = maxOfTwoNumbers(num1, num2);
 console.log(`El número mayor entre ${num1} y ${num2} es ${resultado}.`);
 
 
-
-
-
-
 // Iteration #2: Find longest word
 
+function findLongestWord(words) {
 
+  let longestWord = "";
+ 
+  for (const word of words) {
+      
+      if (word.length > longestWord.length) {
+          longestWord = word;
+      }
+  }
 
+  return longestWord;
+}
 
+const palabras = ['mystery','brother','aviator','crocodile','pearl','orchard','crackpot'];
+const palabraMasLarga = findLongestWord(palabras);
+
+console.log(`La palabra más larga en el arreglo es: ${palabraMasLarga}`);
 
 
 // Iteration #3: Calculate the sum
 
+function sumNumbers(numbers) {
+  
+  let sum = 0;
 
+  for (const number of numbers) {
+     
+      sum += number;
+  }
 
+  return sum;
+}
+
+const numeros = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+const sumaTotal = sumNumbers(numeros);
+
+console.log(`La suma de todos los números en el arreglo es: ${sumaTotal}`);
 
 
 
@@ -56,9 +81,22 @@ console.log(`La media de los números en el array es: ${averageResult}.`);
 
 // Level 2: Array of strings
 
+function averageWordLength(words) {
+  let totalLength = 0;
 
+  for (const word of words) {
+      totalLength += word.length;
+  }
 
+  const averageLength = totalLength / words.length;
 
+  return averageLength;
+}
+
+const palabrs = ['seat','correspond','linen','motif','hole','smell','smart','chaos','fuel','palace'];
+const longitudMedia = averageWordLength(palabrs);
+
+console.log(`La longitud media de las palabras en el arreglo es: ${longitudMedia}`);
 
 
 // Bonus - Iteration #4.1
@@ -78,35 +116,56 @@ function uniquifyArray(words) {
   return uniqueWords;
 }
 
-const words = [
-  'crab',
-  'poison',
-  'contagious',
-  'simple',
-  'bring',
-  'sharp',
-  'playground',
-  'poison',
-  'communion',
-  'simple',
-  'bring'
-];
+const words = ['crab','poison','contagious','simple','bring','sharp','playground','poison','communion','simple','bring'];
 
 const uniqueWordsArray = uniquifyArray(words);
 console.log('Nuevo array sin duplicados:', uniqueWordsArray);
 
 
-
-
 // Iteration #6: Find elements
+function doesWordExist(words, targetWord) {
+ 
+  if (words.length === 0) {
+      return null;
+  }
 
+  
+  for (const word of words2) {
+      if (word === targetWord) {
+          return true; 
+      }
+  }
+  return false; 
+}
 
+const words2 = ['machine','subset','trouble','starting','matter','eating','truth','disobedience'];
+const target = 'machine';
+const result = doesWordExist(words2, target);
 
+console.log(`"${target}" existe la palabra en el array? ${result}`);
 
 
 // Iteration #7: Count repetition
 
+function howManyTimes(words, targetWord) {
 
+  let count = 0;
+
+  for (const word of wordss) {
+    
+      if (word === targetWord) {
+          count++;
+      }
+  }
+
+  return count;
+}
+
+const wordss = ['machine','matter','subset','trouble','starting','matter','eating','matter','truth','disobedience','matter'];
+const palabraObjetivo = 'matter';
+const ocurrencias = howManyTimes(words, palabraObjetivo);
+
+console.log(`La palabra "${palabraObjetivo}" aparece ${ocurrencias} veces en el arreglo.`);
 
 
 // Iteration #8: Bonus
